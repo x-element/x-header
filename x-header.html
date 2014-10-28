@@ -1,57 +1,65 @@
-<link rel="import"
-      href="/components/polymer/polymer.html">
+<link rel="import" href="components/polymer/polymer.html">
+
+<!--
+`x-header` encapsulates the page header into a web component.
+
+    <x-header></x-header>
+
+`x-header` has many links and one brand.
+
+@element x-header
+@blurb Element providing page header.
+@status alpha
+@homepage https://x-element.github.io/x-header
+-->
 
 <polymer-element name="x-header">
   <template>
- 
-  <link rel="stylesheet"
-      href="/components/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="components/bootstrap/bootstrap.min.css">
+    <style>
+      :host {
+        display: block;
+      }
 
-     <style>
-    :host {
-      display: block;
-     
-    }
+      #navbar {
+        position: fixed;
+        background-color: transparent;
+        border: none;
+        border-radius: 0px;
+        width: 100%;
+        z-index: 1;
+      }
 
-    #navbar {
-      position: fixed;
-      background-color: transparent;
-      border: none;
-      border-radius: 0px;
-      width: 100%;
-      z-index: 1;
-    }
-
-    .navbar-default .navbar-brand {
-      color: #333;
-      text-transform: uppercase;
-      font-size: 20px;
-      font-weight: 500;
-      letter-spacing: 0.50px;
-    }
-    .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-      color: #333;
-    }
-    .navbar-default .navbar-collapse {
-      padding-right: 50px;
-      font-size: 14px;
-      font-weight: 300;
-      letter-spacing: 0.5px;
-    }
-    .navbar-default .navbar-nav>li>a {
-      color: #333;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-    .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
-      color: #d2eecb;
-      background-color: transparent;
-    }
-    .navbar-default .navbar-nav>li>a:active {
-      text-decoration: underline;
-    }
-
-  </style>
+      .navbar-default .navbar-brand {
+        color: #333;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 0.50px;
+      }
+      .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+        color: #333;
+      }
+      .navbar-default .navbar-collapse {
+        padding-right: 50px;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+      }
+      .navbar-default .navbar-nav>li>a {
+        color: #333;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+        color: #d2eecb;
+        background-color: transparent;
+      }
+      .navbar-default .navbar-nav>li>a:active {
+        text-decoration: underline;
+      }
+    </style>
+    
     <div id="navbar" class="navbar navbar-default" role="navigation">
       <div class="container">      
         <div class="navbar-header">
@@ -76,12 +84,10 @@
   <script>
     Polymer('x-header', {
 
-
       on_click_button: function (event) {
         this.$.collapse.classList.toggle('in');
       }
 
     });
-
-</script>
+  </script>
 </polymer-element>

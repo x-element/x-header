@@ -1,54 +1,43 @@
 <!DOCTYPE html>
 <html>
-	<style> 
-		bbody {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      font-family: 'RobotoDraft', sans-serif;
-
-    }
-	</style>
   <head>
-    <script src="../platform/platform.js"></script>
+    <script src="components/platform/platform.js"></script>
     <link rel="import" href="x-header.html">
-    <link rel="import" href="/components/font-roboto/roboto.html">
-
+    <link rel="import" href="components/font-roboto/roboto.html">
+    <style> 
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'RobotoDraft', sans-serif;
+        background-color: #d2eecb;
+      }
+    </style>
   </head>
-
-  <body style="background-color: #d2eecb">
-  
-  	<x-header id="header">
-  		
-  	</x-header>
-
+  <body>  
+  	<x-header id="header"></x-header>
     <script>
       var header = document.getElementById('header');
 
-
-      links= [
+      header.links = [
         {
           "label": "About",
-          "url": "http://www.google.it"
+          "url": "#about"
         },
         {
           "label": "Crew",
-          "url": "http://www.google.it"
+          "url": "#crew"
         },
         {
           "label": "Projects",
-          "url": "http://www.google.it"
+          "url": "#projects"
         },
         {
           "label": "Contact",
-          "url": "http://www.google.it"
+          "url": "#contact"
         }
       ];
-
-      header.links = links;
-
-      var brandUrl = '/demo.html';
-      header.brandUrl = brandUrl;
+      header.brandUrl = '/demo.html';
     </script>
   </body>
 </html>

@@ -23,7 +23,7 @@
 
       #navbar {
         position: fixed;
-        background-color: transparent;
+        background-color: #efefef;
         border: none;
         border-radius: 0px;
         width: 100%;
@@ -52,7 +52,7 @@
         text-transform: uppercase;
       }
       .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
-        color: #d2eecb;
+        color: #777;
         background-color: transparent;
       }
       .navbar-default .navbar-nav>li>a:active {
@@ -69,7 +69,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-        <a class="navbar-brand" href="{{ brandUrl }}"> DWTD </a> 
+        <a class="navbar-brand" href="{{ brand.url }}">{{ brand.label }}</a> 
         </div>
         <div id="collapse" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">

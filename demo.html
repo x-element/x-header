@@ -6,11 +6,9 @@
     <link rel="import" href="components/font-roboto/roboto.html">
     <style> 
       body {
-        height: 100%;
         margin: 0;
         padding: 0;
         font-family: 'RobotoDraft', sans-serif;
-        background-color: #d2eecb;
       }
     </style>
   </head>
@@ -21,23 +19,22 @@
 
       header.links = [
         {
-          "label": "About",
-          "url": "#about"
+          "label": "link1",
+          "url": "#link1"
         },
         {
-          "label": "Crew",
-          "url": "#crew"
+          "label": "link2",
+          "url": "#link2"
         },
         {
-          "label": "Projects",
-          "url": "#projects"
-        },
-        {
-          "label": "Contact",
-          "url": "#contact"
+          "label": "link3",
+          "url": "#link3"
         }
       ];
-      header.brandUrl = '/demo.html';
+      header.brand = {
+        "label": "x-element",
+        "url": "/demo.html"
+      }
     </script>
   </body>
 </html>

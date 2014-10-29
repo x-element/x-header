@@ -1,0 +1,25 @@
+{
+  "name": "x-header",
+  "version": "1.0.0",
+  "homepage": "http://x-element.github.io/x-header/",
+  "authors": [
+    "AndryGP tizianosperati"
+  ],
+  "description": "x-header encapsulates a page header into a web component",
+  "main": "x-header.html",
+  "keywords": [
+    "polymer",
+    "header",
+    "web-component",
+    "web-components"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

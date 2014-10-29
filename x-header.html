@@ -7,7 +7,56 @@
 
 `x-header` has many links and one brand.
 
+Links:
 
+    <template repeat="{{ link in links }}">
+      <li class="link"><a href="{{ link.url }}" > {{ link.label }} </a></li>
+    </template>
+
+Brand:
+
+    <a class="navbar-brand" href="{{ brand.url }}">{{ brand.label }}</a>
+
+These values are setted in the `demo.html` file, as described below:
+
+    <script>
+      var header = document.getElementById('header');
+
+      header.links = [
+        {
+          "label": "link1",
+          "url": "#link1"
+        },
+        {
+          "label": "link2",
+          "url": "#link2"
+        },
+        {
+          "label": "link3",
+          "url": "#link3"
+        }
+      ];
+      header.brand = {
+        "label": "x-element",
+        "url": "/demo.html"
+      }
+    </script>
+
+Link's label represent the word shown on the right side of the navbar, link's url is the landing page associated. Same values for brand.
+
+This function:
+
+    <script>
+      Polymer('x-header', {
+
+        on_click_button: function (event) {
+          this.$.collapse.classList.toggle('in');
+        }
+
+      });
+    </script>
+
+allows to have a menu button when the window is heavly resized.
 
 
 @element x-header
@@ -85,7 +134,6 @@
     </div>
   </template>
   <script>
-    // we use this function to get a menu button when the window is resized.
     Polymer('x-header', {
 
       on_click_button: function (event) {

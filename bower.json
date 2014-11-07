@@ -4,7 +4,7 @@
   "homepage": "http://x-element.github.io/x-header",
   "authors": [
   	{ "name": "Andrea D'Amelio", "email": "andrea.damelio@gmail.com" },
-  	{ "name": "Tiziano Sperati", "email": "tiziano.sperati@gmail.com" },
+  	{ "name": "Tiziano Sperati", "email": "tiziano.sperati@gmail.com" }
   ],
   "description": "x-header encapsulates a page header into a web component",
   "main": "x-header.html",
